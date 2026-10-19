@@ -36,6 +36,8 @@ Each example pairs the same markup styled without the skill (`before.html`) agai
 | [`examples/dashboard-card`](examples/dashboard-card) | Grid layout, spacing rhythm, hierarchy, color roles |
 | [`examples/article-typography`](examples/article-typography) | Measure, leading, type scale |
 | [`examples/pricing-cards`](examples/pricing-cards) | Hierarchy, semantic color, asymmetrical balance |
+| [`examples/site-header`](examples/site-header) | Nav hierarchy, grouped spacing, logo as anchor |
+| [`examples/site-footer`](examples/site-footer) | Grid columns, heading contrast, legal-line separation |
 
 ## Why these six files
 

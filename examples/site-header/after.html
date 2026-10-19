@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>After</title>
+<style>
+  :root {
+    --space: 1rem;
+    --primary-600: #4f46e5;
+    --gray-700: #374151;
+    --gray-900: #111827;
+  }
+
+  body {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    margin: 0;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: var(--space) calc(var(--space) * 1.5);
+    border-bottom: 1px solid #e5e7eb;
+    gap: calc(var(--space) * 2);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-900);
+  }
+
+  .logo svg { display: block; }
+
+  nav {
+    display: flex;
+    gap: calc(var(--space) * 1.5);
+  }
+
+  nav a {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    text-decoration: none;
+  }
+
+  nav a:hover { color: var(--primary-600); }
+
+  .spacer { flex: 1; }
+
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space);
+  }
+
+  .signin {
+    color: var(--gray-700);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  .cta {
+    background: var(--primary-600);
+    color: white;
+    border: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <span class="logo">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="20" height="20" rx="5" fill="#4f46e5"/>
+        <path d="M6 10.5L9 13.5L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Fieldnote
+    </span>
+    <nav>
+      <a href="#">Product</a>
+      <a href="#">Pricing</a>
+      <a href="#">Docs</a>
+      <a href="#">Changelog</a>
+    </nav>
+    <span class="spacer"></span>
+    <div class="actions">
+      <a class="signin" href="#">Sign in</a>
+      <button class="cta">Get started</button>
+    </div>
+  </header>
+</body>
+</html>

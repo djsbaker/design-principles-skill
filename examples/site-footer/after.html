@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>After</title>
+<style>
+  :root {
+    --space: 1rem;
+    --gray-100: #e5e7eb;
+    --gray-400: #9ca3af;
+    --gray-500: #94a3b8;
+  }
+
+  body {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #111827;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(var(--space) * 2);
+    max-width: 640px;
+    padding: calc(var(--space) * 2.5) calc(var(--space) * 1.5) calc(var(--space) * 1.5);
+  }
+
+  .col h4 {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--gray-100);
+    margin: 0 0 var(--space);
+  }
+
+  .col a {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--gray-400);
+    text-decoration: none;
+    padding: calc(var(--space) * 0.3) 0;
+  }
+
+  .col a:hover { color: white; }
+
+  .bottom {
+    border-top: 1px solid #1f2937;
+    max-width: 640px;
+    margin: 0 calc(var(--space) * 1.5);
+    padding: var(--space) 0 calc(var(--space) * 1.5);
+    font-size: 0.8125rem;
+    color: var(--gray-500);
+  }
+</style>
+</head>
+<body>
+  <footer>
+    <div class="col">
+      <h4>Product</h4>
+      <a href="#">Overview</a>
+      <a href="#">Pricing</a>
+      <a href="#">Changelog</a>
+    </div>
+    <div class="col">
+      <h4>Company</h4>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="col">
+      <h4>Resources</h4>
+      <a href="#">Docs</a>
+      <a href="#">Blog</a>
+      <a href="#">Support</a>
+    </div>
+  </footer>
+  <p class="bottom">© 2026 Fieldnote Inc. All rights reserved.</p>
+</body>
+</html>
