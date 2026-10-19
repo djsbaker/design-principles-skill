@@ -13,6 +13,12 @@ Use this skill when:
 - Setting up a type scale, color palette, spacing scale, or grid from scratch
 - Reviewing a design, mockup, or screenshot for visual issues
 
+## Precedence: an existing brand/theme system always wins
+
+This skill gives generic, principle-level defaults (contrast ratios, type ratios, spacing units). A project's own design system — a brand guide, a `DESIGN.md`/theme file, existing design tokens, or another installed skill scoped to that brand — encodes decisions specific to that product and takes priority whenever the two disagree. Treat this skill as the fallback for *un-specified* choices and as a lens for critique, not as a source of truth to override an established system.
+
+If this skill is installed alongside another design-guidance skill (brand-specific principles, motion/animation guidance, etc.) and their recommendations conflict — e.g. two different minimum contrast ratios, or different heading scale ratios — defer to the brand-specific or more specific skill, and surface the conflict to the user rather than silently picking one.
+
 ## The six areas
 
 Each area has a dedicated reference file with the full reasoning, numbers, and CSS patterns. Read the relevant file(s) before making a recommendation — don't rely on the one-line summary below alone.
