@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>After</title>
+<style>
+  :root {
+    --space: 1rem;
+    --primary-700: #1d4ed8;
+    --danger-600: #dc2626;
+    --gray-500: #6b7280;
+    --gray-900: #111827;
+  }
+
+  body {
+    font-family: -apple-system, Helvetica, Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: calc(var(--space) * 1.25);
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 var(--space);
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space);
+    max-width: 720px;
+  }
+
+  .card {
+    padding: var(--space);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  }
+
+  .card-title {
+    font-size: 0.8125rem;
+    color: var(--gray-500);
+    margin: 0 0 calc(var(--space) * 0.25);
+  }
+
+  .card-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0 0 calc(var(--space) * 0.5);
+  }
+
+  .card-delta {
+    font-size: 0.8125rem;
+    color: var(--gray-500);
+  }
+
+  .actions {
+    display: flex;
+    gap: calc(var(--space) * 0.5);
+    margin-top: var(--space);
+  }
+
+  button {
+    border: none;
+    padding: 0.5rem 0.875rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .primary-btn {
+    background: var(--primary-700);
+    color: white;
+  }
+
+  .delete-btn {
+    background: white;
+    color: var(--danger-600);
+    border: 1px solid var(--danger-600);
+  }
+</style>
+</head>
+<body>
+  <h1>Revenue Dashboard</h1>
+  <div class="dashboard">
+    <div class="card">
+      <p class="card-title">Total Revenue</p>
+      <p class="card-value">$84,200</p>
+      <p class="card-delta">+4.2% vs last month</p>
+    </div>
+    <div class="card">
+      <p class="card-title">Active Users</p>
+      <p class="card-value">12,480</p>
+      <p class="card-delta">+1.1% vs last month</p>
+    </div>
+    <div class="card">
+      <p class="card-title">Churn Rate</p>
+      <p class="card-value">2.4%</p>
+      <p class="card-delta">-0.3% vs last month</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="primary-btn">Export report</button>
+    <button class="delete-btn">Delete dashboard</button>
+  </div>
+</body>
+</html>

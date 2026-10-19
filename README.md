@@ -27,6 +27,10 @@ Thirteen classic design principles, organized into six reference files so each s
 python -m scripts.package_skill /path/to/design-principles-skill
 ```
 
+## Examples
+
+See the applied skill's effect side by side in [`examples/dashboard-card`](examples/dashboard-card): the same markup styled without the skill (`before.html`) and with it (`after.html`), plus a fix-by-fix table linking each change back to a principle and reference file.
+
 ## Why these six files
 
 The 13 terms (emphasis, balance, contrast, repetition, proportion, movement, white space, rhythm, pattern, hierarchy, variety, unity, harmony) are a standard "elements and principles of design" taxonomy taught broadly in design education. Several overlap heavily in practice — unity, harmony, and balance all describe whether a composition coheres; repetition, pattern, and rhythm all describe structured recurrence — so they're grouped by what they actually diagnose rather than split into 13 thin files.
