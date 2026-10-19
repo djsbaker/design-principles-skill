@@ -31,6 +31,15 @@ python -m scripts.package_skill /path/to/design-principles-skill
 
 The 13 terms (emphasis, balance, contrast, repetition, proportion, movement, white space, rhythm, pattern, hierarchy, variety, unity, harmony) are a standard "elements and principles of design" taxonomy taught broadly in design education. Several overlap heavily in practice — unity, harmony, and balance all describe whether a composition coheres; repetition, pattern, and rhythm all describe structured recurrence — so they're grouped by what they actually diagnose rather than split into 13 thin files.
 
+## Relationship to other skills
+
+This skill deliberately stays in its lane: composition fundamentals (typography, grid, color, space, hierarchy, balance) once a design direction already exists. It doesn't overlap with:
+
+- **Motion/animation skills** (e.g. `emilkowalski/skills`, `design-motion-principles`) — those cover transitions, easing, and animated interaction; this skill is static-composition only.
+- **`ui-ux-pro-max-skill`**-style catalog skills — those pick an industry-appropriate palette and pattern from a pre-built library at the start of a project; this skill reasons about whether a given composition (whatever palette/pattern was chosen) actually works, and how to fix it if not.
+
+The two kinds of skill are complementary and can run together: a catalog skill picks the direction, this one critiques and refines the execution. See the Precedence section in [`SKILL.md`](SKILL.md) for how conflicts between this skill and a project's own brand/theme system (or another installed design skill) should be resolved.
+
 ## A note on sources
 
 This skill is original writing. It's informed by widely-taught, general design knowledge — the kind of thing foundational texts like Robert Bringhurst's *The Elements of Typographic Style* and Josef Müller-Brockmann's *Grid Systems in Graphic Design* are known for articulating — but it does not quote, closely paraphrase, or reproduce content from those or any other specific book. If you want the skill to reflect a particular source's exact framework or terminology more closely, open an issue or PR with the relevant excerpt and a proposed edit.
