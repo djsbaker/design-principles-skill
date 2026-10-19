@@ -29,7 +29,13 @@ python -m scripts.package_skill /path/to/design-principles-skill
 
 ## Examples
 
-See the applied skill's effect side by side in [`examples/dashboard-card`](examples/dashboard-card): the same markup styled without the skill (`before.html`) and with it (`after.html`), plus a fix-by-fix table linking each change back to a principle and reference file.
+Each example pairs the same markup styled without the skill (`before.html`) against it applied (`after.html`), with a fix-by-fix table linking each change back to a principle and reference file.
+
+| Example | Focus |
+|---|---|
+| [`examples/dashboard-card`](examples/dashboard-card) | Grid layout, spacing rhythm, hierarchy, color roles |
+| [`examples/article-typography`](examples/article-typography) | Measure, leading, type scale |
+| [`examples/pricing-cards`](examples/pricing-cards) | Hierarchy, semantic color, asymmetrical balance |
 
 ## Why these six files
 
