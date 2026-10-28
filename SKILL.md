@@ -1,6 +1,6 @@
 ---
 name: design-principles
-description: Apply core visual-design principles — typography, grid/layout, color, white space, contrast/hierarchy, and balance/unity — when writing or reviewing HTML/CSS, critiquing a UI or mockup, or generating a design system/spec. Use this whenever the user is building a web page, app UI, marketing page, dashboard, or design system and cares about readability, polish, or "why does this look off," even if they don't name a specific principle — triggers include requests to style a page, fix a layout that feels "cramped," "unbalanced," "busy," or "flat," set up a type/color/spacing scale, build a grid, choose fonts or colors, or review a design/screenshot for visual issues.
+description: Apply core visual-design principles — typography, grid/layout, color, white space, contrast/hierarchy, balance/unity, and a checklist of overused "AI design tells" (Inter-for-everything, purple-to-blue gradients, nested cards, bounce easing) — when writing or reviewing HTML/CSS, critiquing a UI or mockup, or generating a design system/spec. Use this whenever the user is building a web page, app UI, marketing page, dashboard, or design system and cares about readability, polish, or "why does this look off" or "why does this look generic/AI-generated," even if they don't name a specific principle — triggers include requests to style a page, fix a layout that feels "cramped," "unbalanced," "busy," "flat," or "generic," set up a type/color/spacing scale, build a grid, choose fonts or colors, or review a design/screenshot for visual issues.
 ---
 
 # Design Principles
@@ -15,9 +15,9 @@ Use this skill when:
 
 ## Precedence: an existing brand/theme system always wins
 
-This skill gives generic, principle-level defaults (contrast ratios, type ratios, spacing units). A project's own design system — a brand guide, a `DESIGN.md`/theme file, existing design tokens, or another installed skill scoped to that brand — encodes decisions specific to that product and takes priority whenever the two disagree. Treat this skill as the fallback for *un-specified* choices and as a lens for critique, not as a source of truth to override an established system.
+This skill gives generic, principle-level defaults (contrast ratios, type ratios, spacing units). A project's own design system — a brand guide, a `DESIGN.md`/`PRODUCT.md`-style file, existing design tokens, or another installed skill scoped to that brand — encodes decisions specific to that product and takes priority whenever the two disagree. Treat this skill as the fallback for *un-specified* choices and as a lens for critique, not as a source of truth to override an established system.
 
-If this skill is installed alongside another design-guidance skill (brand-specific principles, motion/animation guidance, etc.) and their recommendations conflict — e.g. two different minimum contrast ratios, or different heading scale ratios — defer to the brand-specific or more specific skill, and surface the conflict to the user rather than silently picking one.
+If this skill is installed alongside another design-guidance skill (brand-specific principles, motion/animation guidance, a larger toolkit like [Impeccable](https://github.com/pbakaus/impeccable), etc.) and their recommendations conflict — e.g. two different minimum contrast ratios, or different heading scale ratios — defer to the brand-specific or more specific skill, and surface the conflict to the user rather than silently picking one. See the README's "Relationship to other skills" section for how this skill's scope compares to larger toolkits.
 
 ## The six areas
 
@@ -45,9 +45,14 @@ When something "looks off," these six areas aren't independent — some are foun
 
 Most "unprofessional" or "cluttered" complaints trace back to #1–#3. Most "flat" or "hard to scan" complaints trace back to #4–#5. #6 is usually the last 10%: everything individually fine, but the whole not reading as a unit.
 
+## A seventh, different kind of check: AI design tells
+
+The six areas above are classic design principles — they're correct regardless of who or what made the page. But a page can satisfy all six and still look unmistakably AI-generated, because the *specific values* models default to converge on the same handful of patterns (Inter for everything, purple-to-blue gradients, cards nested in cards, a rounded-square icon tile above every heading, bounce easing). This is pattern recognition, not calculation, so run it as a separate final pass rather than folding it into the diagnostic order above. See [references/ai-design-tells.md](references/ai-design-tells.md) for the full checklist.
+
 ## Applying this in practice
 
 - **Writing new CSS**: establish the grid and a single spacing/type unit first (see grid-layout.md's "combining type scale and grid"), then layer color and hierarchy decisions on top of that structure — don't pick colors or type sizes before the structural scale exists.
 - **Reviewing existing CSS or a screenshot**: walk the diagnostic order above and name the specific property/value or design choice that's off, with a concrete fix — not vague aesthetic feedback like "make it pop."
 - **Generating a spec** (type scale, color palette, spacing scale, grid): derive values from one base and one ratio/relationship each, and hand back actual CSS custom properties or tokens, not hand-picked one-off values.
+- **Before calling a design finished**: run the AI-design-tells pass once the six principle areas check out — it catches a different kind of problem (generic-but-technically-correct) than the diagnostic order above.
 - Always explain *why* a choice works, not just that it's a rule — the goal is for the user to make the next call themselves.

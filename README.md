@@ -15,7 +15,9 @@ Thirteen classic design principles, organized into six reference files so each s
 | Contrast & hierarchy | Contrast, emphasis, hierarchy, variety | [`references/contrast-and-hierarchy.md`](references/contrast-and-hierarchy.md) |
 | Balance & unity | Balance, movement, repetition, unity, harmony | [`references/balance-and-unity.md`](references/balance-and-unity.md) |
 
-`SKILL.md` is the entry point: it gives Claude a diagnostic order to work through these six areas and points into the relevant reference file(s) for the full reasoning, numbers, and CSS patterns.
+Plus a seventh reference that isn't a classic design principle but is worth checking separately: specific patterns AI-generated UI overuses regardless of whether the underlying principles are technically satisfied — Inter-for-everything, purple-to-blue gradients, nested cards, bounce easing, and more, in [`references/ai-design-tells.md`](references/ai-design-tells.md).
+
+`SKILL.md` is the entry point: it gives Claude a diagnostic order to work through the six principle areas, plus a separate final pass for the AI-design-tells checklist, and points into the relevant reference file(s) for the full reasoning, numbers, and CSS patterns.
 
 ## Installing
 
@@ -49,8 +51,9 @@ This skill deliberately stays in its lane: composition fundamentals (typography,
 
 - **Motion/animation skills** (e.g. `emilkowalski/skills`, `design-motion-principles`) — those cover transitions, easing, and animated interaction; this skill is static-composition only.
 - **`ui-ux-pro-max-skill`**-style catalog skills — those pick an industry-appropriate palette and pattern from a pre-built library at the start of a project; this skill reasons about whether a given composition (whatever palette/pattern was chosen) actually works, and how to fix it if not.
+- **[Impeccable](https://github.com/pbakaus/impeccable)** — a much larger, more operational toolkit: a CLI binary, 24 slash commands (`polish`, `audit`, `critique`, `bolder`, `animate`, etc.), live browser iteration, 62 deterministic detector rules, and a `PRODUCT.md`/`DESIGN.md` workflow for recording durable product and brand decisions. This skill is the opposite in scope on purpose: a lightweight, static reference with no CLI, no hooks, and no install flow of its own — grounded in classic design principles rather than a broader command vocabulary. The two are complementary where they overlap (both check AI-generated-UI "tells" like gradients and nested cards — see [`references/ai-design-tells.md`](references/ai-design-tells.md)), and if both are installed, Impeccable's `PRODUCT.md`/`DESIGN.md` wins on anything brand-specific per the precedence rule below.
 
-The two kinds of skill are complementary and can run together: a catalog skill picks the direction, this one critiques and refines the execution. See the Precedence section in [`SKILL.md`](SKILL.md) for how conflicts between this skill and a project's own brand/theme system (or another installed design skill) should be resolved.
+The motion/catalog skills are complementary and can run together with this one: a catalog skill picks the direction, this one critiques and refines the execution. See the Precedence section in [`SKILL.md`](SKILL.md) for how conflicts between this skill and a project's own brand/theme system (or another installed design skill) should be resolved.
 
 ## A note on sources
 
